@@ -1,0 +1,123 @@
+#header {
+    padding: 5px;
+    background-color: brown;
+  }
+
+nav{
+ overflow: hidden;
+ position: sticky;
+ top: 0;
+}
+
+.nav-anchor{
+  color: white;
+  margin: 5px;
+  padding: 5px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-anchor:hover{
+  background-color: chocolate;
+}
+
+
+#nav-anchor-div{
+  float: right;
+  padding: 5px;
+  text-align: right;
+  width: 40%;
+  margin-top: 10px;
+}
+
+#nav-git-div{
+  float: right;
+  padding: 5px;
+  text-align: right;
+  width: 5%;
+  margin: 5px;
+}
+
+#nav-git-div a img{
+  width: 30px;
+  height: 30px;
+  float: right;
+}
+
+#nav-name{
+  float: left;
+  width: 40%;
+  height: fit-content;
+  margin-left: 10px;
+}
+
+#nav-name p{
+  font-style: italic;
+  color: yellow;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+  width: 80%;
+  background-color:white;
+  padding: 15px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+.movie-row{
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  padding: 5px;
+  border: 1px solid lightgrey;
+  background-color: #f2f2f2;
+  border-radius: 3px;
+  margin-top: 5px;
+}
+
+.movie-row p{
+  width: 90%;
+  margin: 5px;
+  font-style: italic;
+  font-family: sans-serif;
+  float: left;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+
+.movie-row  button{
+  width: fit-content;
+  float: right;
+  margin: 5px;
+  text-align: right;
+  background-color: blue;
+  color: white;
+  padding: 10px;
+}
+
+.movie-row  img{
+  width: 30px;
+  height: 30px;
+  float: right;
+  margin: 5px;
+  text-align: right;
+  color: white;
+  display: none;
+}
+
+#about-div p{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    width: 85%;
+  }
+}

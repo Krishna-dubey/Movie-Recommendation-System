@@ -1,0 +1,18 @@
+{% extends 'layouts.html' %}
+{% block body %}
+
+<div class="container">
+    <h2>Recommended for you</h2>
+
+    {%if message!=null%}
+        <p>{{message}}</p>
+    {%endif%}
+
+    {% for movie in movies %}
+        <div class="movie-row">
+            <p >{{movie}}</p>
+        </div>
+    {%endfor%}
+    
+</div>
+{% endblock %}

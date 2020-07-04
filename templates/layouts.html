@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <script language="JavaScript" type="text/javascript" src="{{url_for('static',filename='js/jquery.js')}}"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Movie Recommendation</title>
+
+  <!-- Custom styles for this template -->
+  <link  rel="stylesheet" href="{{ url_for('static',filename='styles/main.css') }}"  type="text/css">
+</head>
+
+<body>
+
+   
+  <header id="header">
+    <div>
+      <nav>
+        <div id=nav-name>
+          <p>Movie Recommendation System Demo</p>
+        </div>
+
+        <div id=nav-git-div>
+          <a target="_blank" href="https://github.com/Krishna-dubey"><img src="{{url_for('static',filename='github.png')}}"></a>
+        </div>
+
+        <div id="nav-anchor-div">
+          <a class=nav-anchor href="/">Movies</a>
+          <a class=nav-anchor href="{{url_for('recommend')}}">Recommendation</a>
+          <a class=nav-anchor href="{{url_for('about')}}">About Project</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  {% block body %}
+
+  {% endblock %}
+
+</body>
+
+</html>
+

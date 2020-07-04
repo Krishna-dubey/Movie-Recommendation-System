@@ -1,0 +1,34 @@
+{% extends 'layouts.html' %}
+{% block body %}
+<div class="container">
+    {% for movie in movies %}
+        <div class="movie-row">
+            <p >{{movie}}</p>
+            <button  id="btn-{{movie}}" onclick="onWatchClick('{{movie}}')">Watch</button>
+            <img src="{{url_for('static',filename='tick.png')}}" id="img-{{movie}}">
+        </div>
+    {%endfor%}
+</div>
+
+<script>
+    function onWatchClick(title){
+        console.log(title)
+        $.ajax({
+            url : '/watch',
+            data:{'title':title},
+            method:'POST',
+            success: function(data) {
+                document.getElementById('btn-'+title).style.display="none"
+                document.getElementById('img-'+title).style.display="block"
+                console.log("ok")
+
+            },
+            error:function(data){
+                console.log("error")
+                console.log(data)
+            }
+        });
+    }
+    
+</script>
+{% endblock %}
